@@ -1,0 +1,391 @@
+2017-06-13T07:52:01.2196660Z TRACE:: Config.Get(): Configuration key not found. Key: data-directory - Using default value: ../../../Data/
+2017-06-13T07:52:01.2206669Z TRACE:: Config.Get(): Configuration key not found. Key: version-id - Using default value: 
+2017-06-13T07:52:01.2206669Z TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.4.0.0 Mode: DEBUG (64bit)
+2017-06-13T07:52:01.2206669Z TRACE:: Engine.Main(): Started 15:52
+2017-06-13T07:52:02.6061816Z TRACE:: Engine.Main(): Memory 61Mb-App  4Mb-Used  7842Mb-Total
+2017-06-13T07:52:02.6291960Z TRACE:: Config.GetValue(): job-project-id - Using default value: 0
+2017-06-13T07:52:02.6291960Z TRACE:: Config.Get(): Configuration key not found. Key: algorithm-path-python - Using default value: ../../../Algorithm.Python/
+2017-06-13T07:52:04.3037502Z TRACE:: JobQueue.NextJob(): Selected QuantConnect.Algorithm.CSharp.dll
+2017-06-13T07:52:04.3849670Z TRACE:: Config.Get(): Configuration key not found. Key: history-provider - Using default value: SubscriptionDataReaderHistoryProvider
+2017-06-13T07:52:04.6068671Z TRACE:: Config.GetValue(): ignore-version-checks - Using default value: False
+2017-06-13T07:52:04.6419345Z TRACE:: Config.GetValue(): algorithm-manager-time-loop-maximum - Using default value: 10
+2017-06-13T07:52:04.7549956Z TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+2017-06-13T07:52:05.0794020Z TRACE:: Loader.TryCreateILAlgorithm(): Loaded BasicTemplateAlgorithm
+2017-06-13T07:52:05.8495797Z TRACE:: Config.Get(): Configuration key not found. Key: security-data-feeds - Using default value: 
+2017-06-13T07:52:06.5313482Z TRACE:: BrokerageModelSecurityInitializer.Initialize(): Seeded security: SPY: 163.16794891800
+2017-06-13T07:52:06.7376217Z TRACE:: BacktestingResultHandler(): Sample Period Set: 04.00
+2017-06-13T07:52:06.7396206Z TRACE:: Time.TradeableDates(): Security Count: 1
+2017-06-13T07:52:06.7481387Z TRACE:: Config.GetValue(): forward-console-messages - Using default value: True
+2017-06-13T07:52:06.7506383Z TRACE:: JOB HANDLERS: 
+2017-06-13T07:52:06.7521378Z TRACE::          DataFeed:     QuantConnect.Lean.Engine.DataFeeds.FileSystemDataFeed
+2017-06-13T07:52:06.7543862Z TRACE::          Setup:        QuantConnect.Lean.Engine.Setup.ConsoleSetupHandler
+2017-06-13T07:52:06.7558966Z TRACE::          RealTime:     QuantConnect.Lean.Engine.RealTime.BacktestingRealTimeHandler
+2017-06-13T07:52:06.7573936Z TRACE::          Results:      QuantConnect.Lean.Engine.Results.BacktestingResultHandler
+2017-06-13T07:52:06.7593985Z TRACE::          Transactions: QuantConnect.Lean.Engine.TransactionHandlers.BacktestingTransactionHandler
+2017-06-13T07:52:06.7608959Z TRACE::          Commands:     QuantConnect.Queues.EmptyCommandQueueHandler
+2017-06-13T07:52:06.7634758Z TRACE:: Config.GetValue(): send-via-api - Using default value: False
+2017-06-13T07:52:06.7654807Z TRACE::          History Provider:     QuantConnect.Lean.Engine.HistoricalData.SubscriptionDataReaderHistoryProvider
+2017-06-13T07:52:06.9355725Z TRACE:: Debug: Launching analysis for BasicTemplateAlgorithm with LEAN Engine v2.4.0.0
+2017-06-13T07:52:06.9749443Z TRACE:: AlgorithmManager.Run(): Begin DataStream - Start: 7/10/2013 0:00:00 Stop: 11/10/2013 23:59:59
+2017-06-13T07:52:07.0263365Z TRACE:: FileSystemDataFeed.GetEnumerator(): Begin: 7/10/2013 4:00:00 UTC
+2017-06-13T07:52:07.4507872Z TRACE:: Debug: Purchased Stock
+2017-06-13T07:52:16.7456051Z TRACE:: FileSystemDataFeed.Run(): Data Feed Completed at 11/10/2013 20:00:00 UTC
+2017-06-13T07:52:16.7466059Z TRACE:: AlgorithmManager.Run(): Firing On End Of Algorithm...
+2017-06-13T07:52:16.7466059Z TRACE:: Engine.Run(): Exiting Algorithm Manager
+2017-06-13T07:52:17.5316302Z TRACE:: Debug: Algorithm Id:(BasicTemplateAlgorithm) completed in 10.73 seconds at 11k data points per second. Processing total of 117,006 data points.
+2017-06-13T07:52:17.8905629Z TRACE:: STATISTICS:: Total Trades 1
+2017-06-13T07:52:17.8905629Z TRACE:: STATISTICS:: Average Win 0%
+2017-06-13T07:52:17.8905629Z TRACE:: STATISTICS:: Average Loss 0%
+2017-06-13T07:52:17.8905629Z TRACE:: STATISTICS:: Compounding Annual Return 264.956%
+2017-06-13T07:52:17.8905629Z TRACE:: STATISTICS:: Drawdown 2.200%
+2017-06-13T07:52:17.8905629Z TRACE:: STATISTICS:: Expectancy 0
+2017-06-13T07:52:17.8905629Z TRACE:: STATISTICS:: Net Profit 0%
+2017-06-13T07:52:17.8915634Z TRACE:: STATISTICS:: Sharpe Ratio 4.411
+2017-06-13T07:52:17.8915634Z TRACE:: STATISTICS:: Loss Rate 0%
+2017-06-13T07:52:17.8915634Z TRACE:: STATISTICS:: Win Rate 0%
+2017-06-13T07:52:17.8915634Z TRACE:: STATISTICS:: Profit-Loss Ratio 0
+2017-06-13T07:52:17.8915634Z TRACE:: STATISTICS:: Alpha 0.002
+2017-06-13T07:52:17.8915634Z TRACE:: STATISTICS:: Beta 1
+2017-06-13T07:52:17.8915634Z TRACE:: STATISTICS:: Annual Standard Deviation 0.193
+2017-06-13T07:52:17.8915634Z TRACE:: STATISTICS:: Annual Variance 0.037
+2017-06-13T07:52:17.8915634Z TRACE:: STATISTICS:: Information Ratio 6.816
+2017-06-13T07:52:17.8915634Z TRACE:: STATISTICS:: Tracking Error 0
+2017-06-13T07:52:17.8915634Z TRACE:: STATISTICS:: Treynor Ratio 0.851
+2017-06-13T07:52:17.8915634Z TRACE:: STATISTICS:: Total Fees $3.09
+2017-06-13T07:52:17.8915634Z TRACE:: BacktestingResultHandler.SendAnalysisResult(): Processed final packet
+2017-06-13T07:52:17.8925642Z TRACE:: FileSystemDataFeed.Exit(): Exit triggered.
+2017-06-13T07:52:17.8935637Z TRACE:: StateCheck.Ping.Run(): Exited thread.
+2017-06-13T07:52:18.1515564Z TRACE:: Waiting for threads to exit...
+2017-06-13T07:52:18.1515564Z TRACE:: Debug: Your log was successfully created and can be retrieved from: C:\Users\admin\Documents\Lean\Launcher\bin\Debug\log.txt
+2017-06-13T07:52:18.1645730Z TRACE:: BacktestingResultHandler.Run(): Ending Thread...
+2017-06-13T07:52:18.2866969Z TRACE:: Waiting for threads to exit...
+2017-06-13T07:52:18.3034253Z TRACE:: BrokerageTransactionHandler.Run(): Ending Thread...
+2017-06-13T07:52:18.3034253Z TRACE:: FileSystemDataFeed.Run(): Ending Thread... 
+2017-06-13T07:52:18.3885258Z TRACE:: Waiting for threads to exit...
+2017-06-13T07:52:28.3413797Z TRACE:: Engine.Run(): Disconnecting from brokerage...
+2017-06-13T07:52:28.3423806Z TRACE:: Engine.Run(): Disposing of setup handler...
+2017-06-13T07:52:28.3423806Z TRACE:: Engine.Main(): Analysis Completed and Results Posted.
+2017-06-13T07:52:28.3433761Z TRACE:: FileSystemDataFeed.Exit(): Exit triggered.
+2017-06-26T04:40:54.0889879Z TRACE:: Config.Get(): Configuration key not found. Key: data-directory - Using default value: ../../../Data/
+2017-06-26T04:40:54.4439069Z TRACE:: Config.Get(): Configuration key not found. Key: version-id - Using default value: 
+2017-06-26T04:40:54.4449078Z TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.4.0.0 Mode: DEBUG (64bit)
+2017-06-26T04:40:54.4449078Z TRACE:: Engine.Main(): Started 12:40
+2017-06-26T04:40:55.5270170Z TRACE:: Engine.Main(): Memory 70Mb-App  7Mb-Used  5360Mb-Total
+2017-06-26T04:40:55.5360225Z TRACE:: Config.GetValue(): job-project-id - Using default value: 0
+2017-06-26T04:40:55.5360225Z TRACE:: Config.Get(): Configuration key not found. Key: algorithm-path-python - Using default value: ../../../Algorithm.Python/
+2017-06-26T04:40:55.9863207Z TRACE:: JobQueue.NextJob(): Selected QuantConnect.Algorithm.CSharp.dll
+2017-06-26T04:40:56.0153401Z TRACE:: Config.Get(): Configuration key not found. Key: history-provider - Using default value: SubscriptionDataReaderHistoryProvider
+2017-06-26T04:40:56.3075343Z TRACE:: Config.GetValue(): ignore-version-checks - Using default value: False
+2017-06-26T04:41:02.3298061Z TRACE:: Config.GetValue(): algorithm-manager-time-loop-maximum - Using default value: 10
+2017-06-26T04:41:02.3679315Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T04:41:02.3699343Z TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+2017-06-26T04:41:02.4529895Z TRACE:: Loader.TryCreateILAlgorithm(): Loaded BasicTemplateAlgorithm
+2017-06-26T04:41:03.3921931Z TRACE:: BaseDataExchange(DataQueueExchange) Starting...
+2017-06-26T04:41:03.3931939Z TRACE:: BaseDataExchange(CustomDataExchange) Starting...
+2017-06-26T04:41:03.4792495Z TRACE:: BrokerageSetupHandler.Setup(): Initializing algorithm...
+2017-06-26T04:41:03.4802507Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): Initializing Initializing algorithm...
+2017-06-26T04:41:03.4872556Z TRACE:: Config.Get(): Configuration key not found. Key: security-data-feeds - Using default value: 
+2017-06-26T04:41:03.4902574Z TRACE:: Config.GetValue(): send-via-api - Using default value: False
+2017-06-26T04:41:03.5382892Z ERROR:: BaseDataExchange.ConsumeEnumerators():  System.NotImplementedException: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+   at QuantConnect.Lean.Engine.DataFeeds.Queues.LiveDataQueue.GetNextTicks() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\Queues\DataQueue.cs:line 35
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.<GetNextTicksEnumerator>d__30.MoveNext() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 683
+   at QuantConnect.Lean.Engine.DataFeeds.BaseDataExchange.ConsumeEnumerators(CancellationToken token) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\BaseDataExchange.cs:line 234
+2017-06-26T04:41:03.5693100Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T04:41:03.7064004Z ERROR:: DefaultDataProvider.Fetch(): The specified file was not found: ../../../Data/equity\usa\minute\spy\20170623_trade.zip
+2017-06-26T04:41:03.7414255Z ERROR:: DefaultDataProvider.Fetch(): The specified file was not found: ../../../Data/equity\usa\minute\spy\20170626_trade.zip
+2017-06-26T04:41:03.7424253Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T04:41:03.7504299Z TRACE:: BrokerageModelSecurityInitializer.Initialize(): Unable to seed security: SPY
+2017-06-26T04:41:03.7764472Z TRACE:: LiveTradingDataFeed.CreateUniverseSubscription(): Creating user defined universe: QC-UNIVERSE-USERDEFINED-USA-EQUITY 2T
+2017-06-26T04:41:03.7814507Z TRACE:: LiveTradingDataFeed.AddSubscription(): Added QC-UNIVERSE-USERDEFINED-USA-EQUITY,QC-UNIVERSE-USERDEFINED-USA-EQUITY,Second,TradeBar
+2017-06-26T04:41:04.4819141Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): LoggingIn Logging into brokerage...
+2017-06-26T04:41:04.4829160Z TRACE:: BrokerageSetupHandler.Setup(): Connecting to brokerage...
+2017-06-26T04:41:04.4839158Z TRACE:: BrokerageSetupHandler.Setup(): Fetching cash balance from brokerage...
+2017-06-26T04:41:04.4849170Z TRACE:: BrokerageSetupHandler.Setup(): Setting USD cash to 100000
+2017-06-26T04:41:04.4859178Z TRACE:: BrokerageSetupHandler.Setup(): Fetching open orders from brokerage...
+2017-06-26T04:41:04.4929226Z TRACE:: BrokerageSetupHandler.Setup(): Fetching holdings from brokerage...
+2017-06-26T04:41:04.5929893Z ERROR:: Engine.Run(): Failed to initialize algorithm: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+2017-06-26T04:41:04.5949896Z TRACE:: JOB HANDLERS: 
+2017-06-26T04:41:04.5949896Z TRACE::          DataFeed:     QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed
+2017-06-26T04:41:04.5959904Z TRACE::          Setup:        QuantConnect.Lean.Engine.Setup.BrokerageSetupHandler
+2017-06-26T04:41:04.5969909Z TRACE::          RealTime:     QuantConnect.Lean.Engine.RealTime.LiveTradingRealTimeHandler
+2017-06-26T04:41:04.5969909Z TRACE::          Results:      QuantConnect.Lean.Engine.Results.LiveTradingResultHandler
+2017-06-26T04:41:04.5979918Z TRACE::          Transactions: QuantConnect.Lean.Engine.TransactionHandlers.BacktestingTransactionHandler
+2017-06-26T04:41:04.5989923Z TRACE::          Commands:     QuantConnect.Queues.EmptyCommandQueueHandler
+2017-06-26T04:41:04.5989923Z TRACE::          History Provider:     QuantConnect.Lean.Engine.HistoricalData.SubscriptionDataReaderHistoryProvider
+2017-06-26T04:41:04.5999924Z TRACE::          Brokerage:      QuantConnect.Brokerages.Paper.PaperBrokerage
+2017-06-26T04:41:04.6049959Z ERROR:: Failed to initialize algorithm: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+2017-06-26T04:41:04.6059974Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T04:41:04.6140020Z TRACE:: StateCheck.Ping.Run(): Exited thread.
+2017-06-26T04:41:04.6170035Z TRACE:: LiveTradingResultHandler.Run(): Ending Thread...
+2017-06-26T04:41:04.7150699Z TRACE:: Waiting for threads to exit...
+2017-06-26T04:41:34.6489186Z TRACE:: Engine.Run(): Disconnecting from brokerage...
+2017-06-26T04:41:34.6499205Z TRACE:: Engine.Run(): Disposing of setup handler...
+2017-06-26T04:41:34.6509209Z TRACE:: Engine.Main(): Analysis Completed and Results Posted.
+2017-06-26T04:41:34.6948953Z ERROR:: LiveTradingDataFeed.Exit(): Error removing: QC-UNIVERSE-USERDEFINED-USA-EQUITY,QC-UNIVERSE-USERDEFINED-USA-EQUITY,Second,TradeBar System.NotImplementedException: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+   at QuantConnect.Lean.Engine.DataFeeds.Queues.LiveDataQueue.Unsubscribe(LiveNodePacket job, IEnumerable`1 symbols) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\Queues\DataQueue.cs:line 51
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.RemoveSubscription(SubscriptionDataConfig configuration) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 235
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.Exit() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 346
+2017-06-26T04:41:34.6948953Z TRACE:: BaseDataExchange(DataQueueExchange) Stopping...
+2017-06-26T04:41:34.6968963Z TRACE:: BaseDataExchange(CustomDataExchange) Stopping...
+2017-06-26T04:41:34.6978964Z TRACE:: BaseDataExchange(DataQueueExchange).ConsumeQueue(): Stop requested.  Exiting...
+2017-06-26T04:41:34.6988979Z TRACE:: LiveTradingDataFeed.Exit(): Setting cancellation token...
+2017-06-26T04:41:34.7009014Z TRACE:: BaseDataExchange(CustomDataExchange).ConsumeQueue(): Cancellation requested.  Exiting...
+2017-06-26T06:24:28.5859746Z TRACE:: Config.Get(): Configuration key not found. Key: data-directory - Using default value: ../../../Data/
+2017-06-26T06:24:28.5929791Z TRACE:: Config.Get(): Configuration key not found. Key: version-id - Using default value: 
+2017-06-26T06:24:28.5929791Z TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.4.0.0 Mode: DEBUG (64bit)
+2017-06-26T06:24:28.5929791Z TRACE:: Engine.Main(): Started 14:24
+2017-06-26T06:24:29.5707235Z TRACE:: Engine.Main(): Memory 60Mb-App  4Mb-Used  5157Mb-Total
+2017-06-26T06:24:29.5787274Z TRACE:: Config.GetValue(): job-project-id - Using default value: 0
+2017-06-26T06:24:29.5787274Z TRACE:: Config.Get(): Configuration key not found. Key: algorithm-path-python - Using default value: ../../../Algorithm.Python/
+2017-06-26T06:24:30.1009155Z TRACE:: JobQueue.NextJob(): Selected QuantConnect.Algorithm.CSharp.dll
+2017-06-26T06:24:30.1259320Z TRACE:: Config.Get(): Configuration key not found. Key: history-provider - Using default value: SubscriptionDataReaderHistoryProvider
+2017-06-26T06:24:30.2300017Z TRACE:: Config.GetValue(): ignore-version-checks - Using default value: False
+2017-06-26T06:24:30.2420082Z TRACE:: Config.GetValue(): algorithm-manager-time-loop-maximum - Using default value: 10
+2017-06-26T06:24:30.2540261Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T06:24:30.2608157Z TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+2017-06-26T06:24:30.3367193Z TRACE:: Loader.TryCreateILAlgorithm(): Loaded BasicTemplateAlgorithm
+2017-06-26T06:24:31.2849952Z TRACE:: BaseDataExchange(CustomDataExchange) Starting...
+2017-06-26T06:24:31.2879977Z TRACE:: BaseDataExchange(DataQueueExchange) Starting...
+2017-06-26T06:24:31.2980050Z ERROR:: BaseDataExchange.ConsumeEnumerators():  System.NotImplementedException: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+   at QuantConnect.Lean.Engine.DataFeeds.Queues.LiveDataQueue.GetNextTicks() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\Queues\DataQueue.cs:line 35
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.<GetNextTicksEnumerator>d__30.MoveNext() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 683
+   at QuantConnect.Lean.Engine.DataFeeds.BaseDataExchange.ConsumeEnumerators(CancellationToken token) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\BaseDataExchange.cs:line 234
+2017-06-26T06:24:31.3100119Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T06:24:31.3240198Z TRACE:: BrokerageSetupHandler.Setup(): Initializing algorithm...
+2017-06-26T06:24:31.3260226Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): Initializing Initializing algorithm...
+2017-06-26T06:24:31.3360288Z TRACE:: Config.GetValue(): send-via-api - Using default value: False
+2017-06-26T06:24:31.3420325Z TRACE:: Config.Get(): Configuration key not found. Key: security-data-feeds - Using default value: 
+2017-06-26T06:24:31.4991372Z ERROR:: DefaultDataProvider.Fetch(): The specified file was not found: ../../../Data/equity\usa\minute\spy\20170623_trade.zip
+2017-06-26T06:24:31.5021394Z ERROR:: DefaultDataProvider.Fetch(): The specified file was not found: ../../../Data/equity\usa\minute\spy\20170626_trade.zip
+2017-06-26T06:24:31.5061413Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T06:24:31.5101447Z TRACE:: BrokerageModelSecurityInitializer.Initialize(): Unable to seed security: SPY
+2017-06-26T06:24:31.5381622Z TRACE:: LiveTradingDataFeed.CreateUniverseSubscription(): Creating user defined universe: QC-UNIVERSE-USERDEFINED-USA-EQUITY 2T
+2017-06-26T06:24:31.5441662Z TRACE:: LiveTradingDataFeed.AddSubscription(): Added QC-UNIVERSE-USERDEFINED-USA-EQUITY,QC-UNIVERSE-USERDEFINED-USA-EQUITY,Second,TradeBar
+2017-06-26T06:24:32.3276859Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): LoggingIn Logging into brokerage...
+2017-06-26T06:24:32.3286868Z TRACE:: BrokerageSetupHandler.Setup(): Connecting to brokerage...
+2017-06-26T06:24:32.3296876Z TRACE:: BrokerageSetupHandler.Setup(): Fetching cash balance from brokerage...
+2017-06-26T06:24:32.3306881Z TRACE:: BrokerageSetupHandler.Setup(): Setting USD cash to 100000
+2017-06-26T06:24:32.3316889Z TRACE:: BrokerageSetupHandler.Setup(): Fetching open orders from brokerage...
+2017-06-26T06:24:32.3707150Z TRACE:: BrokerageSetupHandler.Setup(): Fetching holdings from brokerage...
+2017-06-26T06:24:32.4034829Z ERROR:: Engine.Run(): Failed to initialize algorithm: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+2017-06-26T06:24:32.4044834Z TRACE:: JOB HANDLERS: 
+2017-06-26T06:24:32.4054846Z TRACE::          DataFeed:     QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed
+2017-06-26T06:24:32.4064851Z TRACE::          Setup:        QuantConnect.Lean.Engine.Setup.BrokerageSetupHandler
+2017-06-26T06:24:32.4074860Z TRACE::          RealTime:     QuantConnect.Lean.Engine.RealTime.LiveTradingRealTimeHandler
+2017-06-26T06:24:32.4084854Z TRACE::          Results:      QuantConnect.Lean.Engine.Results.LiveTradingResultHandler
+2017-06-26T06:24:32.4094866Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T06:24:32.4094866Z TRACE::          Transactions: QuantConnect.Lean.Engine.TransactionHandlers.BacktestingTransactionHandler
+2017-06-26T06:24:32.4104871Z TRACE::          Commands:     QuantConnect.Queues.EmptyCommandQueueHandler
+2017-06-26T06:24:32.4104871Z TRACE::          History Provider:     QuantConnect.Lean.Engine.HistoricalData.SubscriptionDataReaderHistoryProvider
+2017-06-26T06:24:32.4134903Z TRACE::          Brokerage:      QuantConnect.Brokerages.Paper.PaperBrokerage
+2017-06-26T06:24:32.4144911Z ERROR:: Failed to initialize algorithm: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+2017-06-26T06:24:32.4164939Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T06:24:32.4501151Z TRACE:: StateCheck.Ping.Run(): Exited thread.
+2017-06-26T06:24:32.4601228Z TRACE:: LiveTradingResultHandler.Run(): Ending Thread...
+2017-06-26T06:24:32.5511830Z TRACE:: Waiting for threads to exit...
+2017-06-26T06:25:02.5201736Z TRACE:: Engine.Run(): Disconnecting from brokerage...
+2017-06-26T06:25:02.5201736Z TRACE:: Engine.Run(): Disposing of setup handler...
+2017-06-26T06:25:02.5201736Z TRACE:: Engine.Main(): Analysis Completed and Results Posted.
+2017-06-26T06:25:02.5251774Z ERROR:: LiveTradingDataFeed.Exit(): Error removing: QC-UNIVERSE-USERDEFINED-USA-EQUITY,QC-UNIVERSE-USERDEFINED-USA-EQUITY,Second,TradeBar System.NotImplementedException: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+   at QuantConnect.Lean.Engine.DataFeeds.Queues.LiveDataQueue.Unsubscribe(LiveNodePacket job, IEnumerable`1 symbols) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\Queues\DataQueue.cs:line 51
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.RemoveSubscription(SubscriptionDataConfig configuration) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 235
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.Exit() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 346
+2017-06-26T06:25:02.5261783Z TRACE:: BaseDataExchange(DataQueueExchange) Stopping...
+2017-06-26T06:25:02.5261783Z TRACE:: BaseDataExchange(CustomDataExchange) Stopping...
+2017-06-26T06:25:02.5261783Z TRACE:: LiveTradingDataFeed.Exit(): Setting cancellation token...
+2017-06-26T06:25:02.5271798Z TRACE:: BaseDataExchange(DataQueueExchange).ConsumeQueue(): Stop requested.  Exiting...
+2017-06-26T06:25:02.5311814Z TRACE:: BaseDataExchange(CustomDataExchange).ConsumeQueue(): Cancellation requested.  Exiting...
+2017-06-26T06:27:39.5046369Z TRACE:: Config.Get(): Configuration key not found. Key: data-directory - Using default value: ../../../Data/
+2017-06-26T06:27:39.5056373Z TRACE:: Config.Get(): Configuration key not found. Key: version-id - Using default value: 
+2017-06-26T06:27:39.5056373Z TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.4.0.0 Mode: DEBUG (64bit)
+2017-06-26T06:27:39.5056373Z TRACE:: Engine.Main(): Started 14:27
+2017-06-26T06:27:40.1670775Z TRACE:: Engine.Main(): Memory 70Mb-App  5Mb-Used  4497Mb-Total
+2017-06-26T06:27:40.1820859Z TRACE:: Config.GetValue(): job-project-id - Using default value: 0
+2017-06-26T06:27:40.1820859Z TRACE:: Config.Get(): Configuration key not found. Key: algorithm-path-python - Using default value: ../../../Algorithm.Python/
+2017-06-26T06:27:40.7334521Z TRACE:: JobQueue.NextJob(): Selected QuantConnect.Algorithm.CSharp.dll
+2017-06-26T06:27:40.7554670Z TRACE:: Config.Get(): Configuration key not found. Key: history-provider - Using default value: SubscriptionDataReaderHistoryProvider
+2017-06-26T06:27:40.8955589Z TRACE:: Config.GetValue(): ignore-version-checks - Using default value: False
+2017-06-26T06:27:48.9356275Z TRACE:: Config.GetValue(): algorithm-manager-time-loop-maximum - Using default value: 10
+2017-06-26T06:27:48.9586415Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T06:27:49.0196815Z TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+2017-06-26T06:27:49.1107420Z TRACE:: Loader.TryCreateILAlgorithm(): Loaded BasicTemplateAlgorithm
+2017-06-26T06:27:50.0350806Z TRACE:: BaseDataExchange(CustomDataExchange) Starting...
+2017-06-26T06:27:50.0350806Z TRACE:: BaseDataExchange(DataQueueExchange) Starting...
+2017-06-26T06:27:50.2400019Z ERROR:: BaseDataExchange.ConsumeEnumerators():  System.NotImplementedException: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+   at QuantConnect.Lean.Engine.DataFeeds.Queues.LiveDataQueue.GetNextTicks() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\Queues\DataQueue.cs:line 35
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.<GetNextTicksEnumerator>d__30.MoveNext() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 683
+   at QuantConnect.Lean.Engine.DataFeeds.BaseDataExchange.ConsumeEnumerators(CancellationToken token) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\BaseDataExchange.cs:line 234
+2017-06-26T06:27:50.2490084Z TRACE:: BrokerageSetupHandler.Setup(): Initializing algorithm...
+2017-06-26T06:27:50.2500089Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): Initializing Initializing algorithm...
+2017-06-26T06:27:50.2520103Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T06:27:50.2530111Z TRACE:: Config.GetValue(): send-via-api - Using default value: False
+2017-06-26T06:27:50.2580142Z TRACE:: Config.Get(): Configuration key not found. Key: security-data-feeds - Using default value: 
+2017-06-26T06:27:50.4441377Z ERROR:: DefaultDataProvider.Fetch(): The specified file was not found: ../../../Data/equity\usa\minute\spy\20170623_trade.zip
+2017-06-26T06:27:50.4461394Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T06:27:50.4481400Z ERROR:: DefaultDataProvider.Fetch(): The specified file was not found: ../../../Data/equity\usa\minute\spy\20170626_trade.zip
+2017-06-26T06:27:50.4571461Z TRACE:: BrokerageModelSecurityInitializer.Initialize(): Unable to seed security: SPY
+2017-06-26T06:27:50.4591478Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T06:27:50.4921699Z TRACE:: LiveTradingDataFeed.CreateUniverseSubscription(): Creating user defined universe: QC-UNIVERSE-USERDEFINED-USA-EQUITY 2T
+2017-06-26T06:27:50.4971723Z TRACE:: LiveTradingDataFeed.AddSubscription(): Added QC-UNIVERSE-USERDEFINED-USA-EQUITY,QC-UNIVERSE-USERDEFINED-USA-EQUITY,Second,TradeBar
+2017-06-26T06:27:51.2516730Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): LoggingIn Logging into brokerage...
+2017-06-26T06:27:51.2526742Z TRACE:: BrokerageSetupHandler.Setup(): Connecting to brokerage...
+2017-06-26T06:27:51.2536754Z TRACE:: BrokerageSetupHandler.Setup(): Fetching cash balance from brokerage...
+2017-06-26T06:27:51.2556764Z TRACE:: BrokerageSetupHandler.Setup(): Setting USD cash to 100000
+2017-06-26T06:27:51.2566768Z TRACE:: BrokerageSetupHandler.Setup(): Fetching open orders from brokerage...
+2017-06-26T06:27:51.2656830Z TRACE:: BrokerageSetupHandler.Setup(): Fetching holdings from brokerage...
+2017-06-26T06:27:51.2947017Z ERROR:: Engine.Run(): Failed to initialize algorithm: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+2017-06-26T06:27:51.2967030Z TRACE:: JOB HANDLERS: 
+2017-06-26T06:27:51.2977042Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T06:27:51.2977042Z TRACE::          DataFeed:     QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed
+2017-06-26T06:27:51.2977042Z TRACE::          Setup:        QuantConnect.Lean.Engine.Setup.BrokerageSetupHandler
+2017-06-26T06:27:51.2977042Z ERROR:: Failed to initialize algorithm: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+2017-06-26T06:27:51.2977042Z TRACE::          RealTime:     QuantConnect.Lean.Engine.RealTime.LiveTradingRealTimeHandler
+2017-06-26T06:27:51.2987047Z TRACE::          Results:      QuantConnect.Lean.Engine.Results.LiveTradingResultHandler
+2017-06-26T06:27:51.2987047Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-06-26T06:27:51.2987047Z TRACE::          Transactions: QuantConnect.Lean.Engine.TransactionHandlers.BacktestingTransactionHandler
+2017-06-26T06:27:51.2987047Z TRACE::          Commands:     QuantConnect.Queues.EmptyCommandQueueHandler
+2017-06-26T06:27:51.2987047Z TRACE::          History Provider:     QuantConnect.Lean.Engine.HistoricalData.SubscriptionDataReaderHistoryProvider
+2017-06-26T06:27:51.2987047Z TRACE::          Brokerage:      QuantConnect.Brokerages.Paper.PaperBrokerage
+2017-06-26T06:27:51.3157162Z TRACE:: StateCheck.Ping.Run(): Exited thread.
+2017-06-26T06:27:51.3367299Z TRACE:: LiveTradingResultHandler.Run(): Ending Thread...
+2017-06-26T06:27:51.4407986Z TRACE:: Waiting for threads to exit...
+2017-06-26T06:28:21.3466300Z TRACE:: Engine.Run(): Disconnecting from brokerage...
+2017-06-26T06:28:21.3466300Z TRACE:: Engine.Run(): Disposing of setup handler...
+2017-06-26T06:28:21.3466300Z TRACE:: Engine.Main(): Analysis Completed and Results Posted.
+2017-06-26T06:28:21.3666433Z ERROR:: LiveTradingDataFeed.Exit(): Error removing: QC-UNIVERSE-USERDEFINED-USA-EQUITY,QC-UNIVERSE-USERDEFINED-USA-EQUITY,Second,TradeBar System.NotImplementedException: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+   at QuantConnect.Lean.Engine.DataFeeds.Queues.LiveDataQueue.Unsubscribe(LiveNodePacket job, IEnumerable`1 symbols) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\Queues\DataQueue.cs:line 51
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.RemoveSubscription(SubscriptionDataConfig configuration) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 235
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.Exit() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 346
+2017-06-26T06:28:21.3676441Z TRACE:: BaseDataExchange(DataQueueExchange) Stopping...
+2017-06-26T06:28:21.3676441Z TRACE:: BaseDataExchange(CustomDataExchange) Stopping...
+2017-06-26T06:28:21.3676441Z TRACE:: BaseDataExchange(DataQueueExchange).ConsumeQueue(): Stop requested.  Exiting...
+2017-06-26T06:28:21.3676441Z TRACE:: LiveTradingDataFeed.Exit(): Setting cancellation token...
+2017-06-26T06:28:21.3716472Z TRACE:: BaseDataExchange(CustomDataExchange).ConsumeQueue(): Cancellation requested.  Exiting...
+2017-07-04T08:21:41.7773935Z TRACE:: Config.Get(): Configuration key not found. Key: data-directory - Using default value: ../../../Data/
+2017-07-04T08:21:41.8231809Z TRACE:: Config.Get(): Configuration key not found. Key: version-id - Using default value: 
+2017-07-04T08:21:41.8231809Z TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.4.0.0 Mode: DEBUG (64bit)
+2017-07-04T08:21:41.8231809Z TRACE:: Engine.Main(): Started 16:21
+2017-07-04T08:21:42.6423413Z TRACE:: Engine.Main(): Memory 71Mb-App  6Mb-Used  4593Mb-Total
+2017-07-04T08:21:42.6533491Z TRACE:: Config.GetValue(): job-project-id - Using default value: 0
+2017-07-04T08:21:42.6533491Z TRACE:: Config.Get(): Configuration key not found. Key: algorithm-path-python - Using default value: ../../../Algorithm.Python/
+2017-07-04T08:21:43.0996437Z TRACE:: JobQueue.NextJob(): Selected QuantConnect.Algorithm.CSharp.dll
+2017-07-04T08:21:43.1246604Z TRACE:: Config.Get(): Configuration key not found. Key: history-provider - Using default value: SubscriptionDataReaderHistoryProvider
+2017-07-04T08:21:43.2597502Z TRACE:: Config.GetValue(): ignore-version-checks - Using default value: False
+2017-07-04T08:21:43.2757601Z TRACE:: Config.GetValue(): algorithm-manager-time-loop-maximum - Using default value: 10
+2017-07-04T08:21:43.2927723Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-07-04T08:21:43.2947729Z TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+2017-07-04T08:21:43.3388028Z TRACE:: Loader.TryCreateILAlgorithm(): Loaded BasicTemplateAlgorithm
+2017-07-04T08:21:44.3313046Z TRACE:: BaseDataExchange(DataQueueExchange) Starting...
+2017-07-04T08:21:44.3313046Z TRACE:: BaseDataExchange(CustomDataExchange) Starting...
+2017-07-04T08:21:44.3573505Z ERROR:: BaseDataExchange.ConsumeEnumerators():  System.NotImplementedException: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+   at QuantConnect.Lean.Engine.DataFeeds.Queues.LiveDataQueue.GetNextTicks() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\Queues\DataQueue.cs:line 35
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.<GetNextTicksEnumerator>d__30.MoveNext() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 683
+   at QuantConnect.Lean.Engine.DataFeeds.BaseDataExchange.ConsumeEnumerators(CancellationToken token) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\BaseDataExchange.cs:line 234
+2017-07-04T08:21:44.3623537Z TRACE:: BrokerageSetupHandler.Setup(): Initializing algorithm...
+2017-07-04T08:21:44.3633538Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): Initializing Initializing algorithm...
+2017-07-04T08:21:44.3663567Z TRACE:: Config.GetValue(): send-via-api - Using default value: False
+2017-07-04T08:21:44.3683566Z TRACE:: Config.Get(): Configuration key not found. Key: security-data-feeds - Using default value: 
+2017-07-04T08:21:44.3713588Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-07-04T08:21:44.4504128Z TRACE:: LiveTradingDataFeed.CreateUniverseSubscription(): Creating user defined universe: QC-UNIVERSE-USERDEFINED-USA-BASE 2S
+2017-07-04T08:21:44.4564157Z TRACE:: LiveTradingDataFeed.AddSubscription(): Added QC-UNIVERSE-USERDEFINED-USA-BASE,QC-UNIVERSE-USERDEFINED-USA-BASE,Minute,AstriData
+2017-07-04T08:21:45.3640188Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): LoggingIn Logging into brokerage...
+2017-07-04T08:21:45.3640188Z TRACE:: BrokerageSetupHandler.Setup(): Connecting to brokerage...
+2017-07-04T08:21:45.3650175Z TRACE:: BrokerageSetupHandler.Setup(): Fetching cash balance from brokerage...
+2017-07-04T08:21:45.3660184Z TRACE:: BrokerageSetupHandler.Setup(): Setting USD cash to 250000
+2017-07-04T08:21:45.3660184Z TRACE:: BrokerageSetupHandler.Setup(): Fetching open orders from brokerage...
+2017-07-04T08:21:45.3730242Z TRACE:: BrokerageSetupHandler.Setup(): Fetching holdings from brokerage...
+2017-07-04T08:21:45.3920356Z TRACE:: LiveTradingDataFeed.CreateUniverseSubscription(): Creating user defined universe: QC-UNIVERSE-USERDEFINED-USA-EQUITY 2T
+2017-07-04T08:21:45.3920356Z TRACE:: LiveTradingDataFeed.AddSubscription(): Added QC-UNIVERSE-USERDEFINED-USA-EQUITY,QC-UNIVERSE-USERDEFINED-USA-EQUITY,Second,TradeBar
+2017-07-04T08:21:45.4704268Z ERROR:: Engine.Run(): Failed to initialize algorithm: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+2017-07-04T08:21:45.4704268Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-07-04T08:21:45.4714315Z TRACE:: JOB HANDLERS: 
+2017-07-04T08:21:45.4714315Z TRACE::          DataFeed:     QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed
+2017-07-04T08:21:45.4724313Z TRACE::          Setup:        QuantConnect.Lean.Engine.Setup.BrokerageSetupHandler
+2017-07-04T08:21:45.4724313Z TRACE::          RealTime:     QuantConnect.Lean.Engine.RealTime.LiveTradingRealTimeHandler
+2017-07-04T08:21:45.4724313Z TRACE::          Results:      QuantConnect.Lean.Engine.Results.LiveTradingResultHandler
+2017-07-04T08:21:45.4724313Z TRACE::          Transactions: QuantConnect.Lean.Engine.TransactionHandlers.BacktestingTransactionHandler
+2017-07-04T08:21:45.4724313Z TRACE::          Commands:     QuantConnect.Queues.EmptyCommandQueueHandler
+2017-07-04T08:21:45.4724313Z TRACE::          History Provider:     QuantConnect.Lean.Engine.HistoricalData.SubscriptionDataReaderHistoryProvider
+2017-07-04T08:21:45.4724313Z TRACE::          Brokerage:      QuantConnect.Brokerages.Paper.PaperBrokerage
+2017-07-04T08:21:45.4814385Z ERROR:: Failed to initialize algorithm: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+2017-07-04T08:21:45.4814385Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-07-04T08:21:45.4924449Z TRACE:: StateCheck.Ping.Run(): Exited thread.
+2017-07-04T08:21:45.5034517Z TRACE:: LiveTradingResultHandler.Run(): Ending Thread...
+2017-07-04T08:21:45.5935117Z TRACE:: Waiting for threads to exit...
+2017-07-04T08:22:15.5272007Z TRACE:: Engine.Run(): Disconnecting from brokerage...
+2017-07-04T08:22:15.5272007Z TRACE:: Engine.Run(): Disposing of setup handler...
+2017-07-04T08:22:15.5272007Z TRACE:: Engine.Main(): Analysis Completed and Results Posted.
+2017-07-04T08:22:15.5332065Z TRACE:: LiveTradingDataFeed.RemoveSubscription(): Removed QC-UNIVERSE-USERDEFINED-USA-BASE,QC-UNIVERSE-USERDEFINED-USA-BASE,Minute,AstriData
+2017-07-04T08:22:15.5512163Z ERROR:: LiveTradingDataFeed.Exit(): Error removing: QC-UNIVERSE-USERDEFINED-USA-EQUITY,QC-UNIVERSE-USERDEFINED-USA-EQUITY,Second,TradeBar System.NotImplementedException: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+   at QuantConnect.Lean.Engine.DataFeeds.Queues.LiveDataQueue.Unsubscribe(LiveNodePacket job, IEnumerable`1 symbols) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\Queues\DataQueue.cs:line 51
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.RemoveSubscription(SubscriptionDataConfig configuration) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 235
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.Exit() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 346
+2017-07-04T08:22:15.5512163Z TRACE:: BaseDataExchange(DataQueueExchange) Stopping...
+2017-07-04T08:22:15.5512163Z TRACE:: BaseDataExchange(CustomDataExchange) Stopping...
+2017-07-04T08:22:15.5512163Z TRACE:: BaseDataExchange(DataQueueExchange).ConsumeQueue(): Stop requested.  Exiting...
+2017-07-04T08:22:15.5512163Z TRACE:: LiveTradingDataFeed.Exit(): Setting cancellation token...
+2017-07-04T08:22:15.5622252Z TRACE:: BaseDataExchange(CustomDataExchange).ConsumeQueue(): Cancellation requested.  Exiting...
+2017-07-04T08:29:18.0538294Z TRACE:: Config.Get(): Configuration key not found. Key: data-directory - Using default value: ../../../Data/
+2017-07-04T08:29:18.0548299Z TRACE:: Config.Get(): Configuration key not found. Key: version-id - Using default value: 
+2017-07-04T08:29:18.0548299Z TRACE:: Engine.Main(): LEAN ALGORITHMIC TRADING ENGINE v2.4.0.0 Mode: DEBUG (64bit)
+2017-07-04T08:29:18.0548299Z TRACE:: Engine.Main(): Started 16:29
+2017-07-04T08:29:18.9764415Z TRACE:: Engine.Main(): Memory 70Mb-App  7Mb-Used  4502Mb-Total
+2017-07-04T08:29:18.9914513Z TRACE:: Config.GetValue(): job-project-id - Using default value: 0
+2017-07-04T08:29:18.9914513Z TRACE:: Config.Get(): Configuration key not found. Key: algorithm-path-python - Using default value: ../../../Algorithm.Python/
+2017-07-04T08:29:19.7299431Z TRACE:: JobQueue.NextJob(): Selected QuantConnect.Algorithm.CSharp.dll
+2017-07-04T08:29:19.7619623Z TRACE:: Config.Get(): Configuration key not found. Key: history-provider - Using default value: SubscriptionDataReaderHistoryProvider
+2017-07-04T08:29:19.9550898Z TRACE:: Config.GetValue(): ignore-version-checks - Using default value: False
+2017-07-04T08:29:20.2192657Z TRACE:: Config.GetValue(): algorithm-manager-time-loop-maximum - Using default value: 10
+2017-07-04T08:29:20.2472839Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-07-04T08:29:20.2532886Z TRACE:: Loader.TryCreateILAlgorithm(): Loading only the algorithm assembly
+2017-07-04T08:29:20.3123283Z TRACE:: Loader.TryCreateILAlgorithm(): Loaded LiveTradingFeaturesAlgorithm
+2017-07-04T08:29:21.2631041Z TRACE:: BaseDataExchange(DataQueueExchange) Starting...
+2017-07-04T08:29:21.2661063Z TRACE:: BaseDataExchange(CustomDataExchange) Starting...
+2017-07-04T08:29:21.2981279Z ERROR:: BaseDataExchange.ConsumeEnumerators():  System.NotImplementedException: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+   at QuantConnect.Lean.Engine.DataFeeds.Queues.LiveDataQueue.GetNextTicks() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\Queues\DataQueue.cs:line 35
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.<GetNextTicksEnumerator>d__30.MoveNext() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 683
+   at QuantConnect.Lean.Engine.DataFeeds.BaseDataExchange.ConsumeEnumerators(CancellationToken token) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\BaseDataExchange.cs:line 234
+2017-07-04T08:29:21.3051324Z TRACE:: BrokerageSetupHandler.Setup(): Initializing algorithm...
+2017-07-04T08:29:21.3071333Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): Initializing Initializing algorithm...
+2017-07-04T08:29:21.3091343Z TRACE:: Config.GetValue(): send-via-api - Using default value: False
+2017-07-04T08:29:21.3141374Z TRACE:: Config.Get(): Configuration key not found. Key: security-data-feeds - Using default value: 
+2017-07-04T08:29:21.3161388Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-07-04T08:29:21.4262114Z TRACE:: LiveTradingDataFeed.CreateUniverseSubscription(): Creating user defined universe: QC-UNIVERSE-USERDEFINED-USA-BASE 2S
+2017-07-04T08:29:21.4352176Z TRACE:: LiveTradingDataFeed.AddSubscription(): Added QC-UNIVERSE-USERDEFINED-USA-BASE,QC-UNIVERSE-USERDEFINED-USA-BASE,Second,Bitcoin
+2017-07-04T08:29:22.3087974Z TRACE:: LiveTradingResultHandler.SendStatusUpdate(): LoggingIn Logging into brokerage...
+2017-07-04T08:29:22.3097982Z TRACE:: BrokerageSetupHandler.Setup(): Connecting to brokerage...
+2017-07-04T08:29:22.3107991Z TRACE:: BrokerageSetupHandler.Setup(): Fetching cash balance from brokerage...
+2017-07-04T08:29:22.3117992Z TRACE:: BrokerageSetupHandler.Setup(): Setting USD cash to 25000
+2017-07-04T08:29:22.3128007Z TRACE:: BrokerageSetupHandler.Setup(): Fetching open orders from brokerage...
+2017-07-04T08:29:22.3218058Z TRACE:: BrokerageSetupHandler.Setup(): Fetching holdings from brokerage...
+2017-07-04T08:29:22.3428196Z TRACE:: LiveTradingDataFeed.CreateUniverseSubscription(): Creating user defined universe: QC-UNIVERSE-USERDEFINED-USA-EQUITY 2T
+2017-07-04T08:29:22.3438208Z TRACE:: LiveTradingDataFeed.AddSubscription(): Added QC-UNIVERSE-USERDEFINED-USA-EQUITY,QC-UNIVERSE-USERDEFINED-USA-EQUITY,Second,TradeBar
+2017-07-04T08:29:22.3888508Z ERROR:: Engine.Run(): Failed to initialize algorithm: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+2017-07-04T08:29:22.3898510Z TRACE:: JOB HANDLERS: 
+2017-07-04T08:29:22.3908514Z TRACE::          DataFeed:     QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed
+2017-07-04T08:29:22.3918523Z TRACE::          Setup:        QuantConnect.Lean.Engine.Setup.BrokerageSetupHandler
+2017-07-04T08:29:22.3918523Z TRACE::          RealTime:     QuantConnect.Lean.Engine.RealTime.LiveTradingRealTimeHandler
+2017-07-04T08:29:22.3928531Z TRACE::          Results:      QuantConnect.Lean.Engine.Results.LiveTradingResultHandler
+2017-07-04T08:29:22.3938540Z TRACE::          Transactions: QuantConnect.Lean.Engine.TransactionHandlers.BacktestingTransactionHandler
+2017-07-04T08:29:22.3938540Z TRACE::          Commands:     QuantConnect.Queues.EmptyCommandQueueHandler
+2017-07-04T08:29:22.3958556Z TRACE::          History Provider:     QuantConnect.Lean.Engine.HistoricalData.SubscriptionDataReaderHistoryProvider
+2017-07-04T08:29:22.3968607Z TRACE::          Brokerage:      QuantConnect.Brokerages.Paper.PaperBrokerage
+2017-07-04T08:29:22.3978570Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-07-04T08:29:22.3988575Z ERROR:: Failed to initialize algorithm: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+2017-07-04T08:29:22.3998579Z ERROR:: LiveTradingResultHandler.Update(): Algorithm not yet initialized.
+2017-07-04T08:29:22.4348803Z TRACE:: StateCheck.Ping.Run(): Exited thread.
+2017-07-04T08:29:22.4438871Z TRACE:: LiveTradingResultHandler.Run(): Ending Thread...
+2017-07-04T08:29:22.5359475Z TRACE:: Waiting for threads to exit...
+2017-07-04T08:29:52.4447808Z TRACE:: Engine.Run(): Disconnecting from brokerage...
+2017-07-04T08:29:52.4457816Z TRACE:: Engine.Run(): Disposing of setup handler...
+2017-07-04T08:29:52.4457816Z TRACE:: Engine.Main(): Analysis Completed and Results Posted.
+2017-07-04T08:29:52.4527882Z TRACE:: LiveTradingDataFeed.RemoveSubscription(): Removed QC-UNIVERSE-USERDEFINED-USA-BASE,QC-UNIVERSE-USERDEFINED-USA-BASE,Second,Bitcoin
+2017-07-04T08:29:52.4707998Z ERROR:: LiveTradingDataFeed.Exit(): Error removing: QC-UNIVERSE-USERDEFINED-USA-EQUITY,QC-UNIVERSE-USERDEFINED-USA-EQUITY,Second,TradeBar System.NotImplementedException: QuantConnect.Queues.LiveDataQueue has not implemented live data.
+   at QuantConnect.Lean.Engine.DataFeeds.Queues.LiveDataQueue.Unsubscribe(LiveNodePacket job, IEnumerable`1 symbols) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\Queues\DataQueue.cs:line 51
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.RemoveSubscription(SubscriptionDataConfig configuration) in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 235
+   at QuantConnect.Lean.Engine.DataFeeds.LiveTradingDataFeed.Exit() in c:\Users\admin\Documents\Lean\Engine\DataFeeds\LiveTradingDataFeed.cs:line 346
+2017-07-04T08:29:52.4717999Z TRACE:: BaseDataExchange(DataQueueExchange) Stopping...
+2017-07-04T08:29:52.4717999Z TRACE:: BaseDataExchange(CustomDataExchange) Stopping...
+2017-07-04T08:29:52.4717999Z TRACE:: LiveTradingDataFeed.Exit(): Setting cancellation token...
+2017-07-04T08:29:52.4717999Z TRACE:: BaseDataExchange(DataQueueExchange).ConsumeQueue(): Stop requested.  Exiting...
+2017-07-04T08:29:52.4828067Z TRACE:: BaseDataExchange(CustomDataExchange).ConsumeQueue(): Cancellation requested.  Exiting...
