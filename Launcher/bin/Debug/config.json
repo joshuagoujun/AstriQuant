@@ -9,7 +9,7 @@
     "environment": "backtesting-desktop", // "live-paper", "backtesting-desktop", "live-interactive", "live-interactive-iqfeed"
 
     // algorithm class selector
-    "algorithm-type-name": "BasicTemplateAlgorithm", // BasicMACDTrendLongOnly, BasicTemplateAlgorithm
+    "algorithm-type-name": "BasicLongOnlyAlgorithm", // BasicMACDTrendLongOnly, BasicTemplateAlgorithm
 
     // Algorithm language selector - options CSharp, FSharp, VisualBasic, Python, Java
     "algorithm-language": "CSharp",

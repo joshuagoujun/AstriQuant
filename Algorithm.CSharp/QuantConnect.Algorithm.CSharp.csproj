@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddRemoveSecurityRegressionAlgorithm.cs" />
+    <Compile Include="BasicLongOnlyAlgorithm.cs" />
     <Compile Include="BasicMACDTrendLongOnly.cs" />
     <Compile Include="BasicTemplateDailyAlgorithm.cs" />
     <Compile Include="FuturesMomentumAlgorithm.cs" />
@@ -217,7 +218,7 @@
   <Target Name="BeforeBuild">
   </Target> -->
   <Target Name="AfterBuild">
-	  <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="..\Launcher\bin\Debug\"  ContinueOnError="true" />
-	  <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="..\UserInterface\bin\Debug\" ContinueOnError="true" />
+    <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="..\Launcher\bin\Debug\" ContinueOnError="true" />
+    <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="..\UserInterface\bin\Debug\" ContinueOnError="true" />
   </Target>
 </Project>

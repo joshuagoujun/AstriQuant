@@ -80,3 +80,4 @@ C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Indica
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Indicators.xml
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Logging.pdb
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Logging.xml
+C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\obj\Debug\QuantConnect.Algorithm.CSharp.csprojResolveAssemblyReference.cache

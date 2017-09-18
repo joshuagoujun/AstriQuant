@@ -67,7 +67,7 @@ namespace QuantConnect.Algorithm.CSharp
             // (stays the same for the whole trading day)
             emaShort = EMA(symbol, 10, Resolution.Daily);
             emaLong = EMA(symbol, 50, Resolution.Daily);
-
+            
         }
 
         //Handle TradeBar Events: a TradeBar occurs on every time-interval
