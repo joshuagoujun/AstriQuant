@@ -32,10 +32,11 @@ namespace QuantConnect.Algorithm.CSharp
     {
         // define required variables
         // strategy related
-        string symbol = "000060-SZSE";  // "000651-SZSE";
+        string symbol = "000060-SZSE";
         string bar;
         int barNumber = 0;
         int entryBar = 0;
+        int exitBar = 0;
         decimal tolerance = 0m; //0.1% safety margin in prices to avoid bouncing
         DateTime sampledToday = DateTime.Now;
 
@@ -47,15 +48,15 @@ namespace QuantConnect.Algorithm.CSharp
         decimal nav = 1000000m;
         OrderTicket orderTicket;
 
-        //Set up the EMA Class:
+        // indicators
         ExponentialMovingAverage emaShort;
         ExponentialMovingAverage emaLong;
 
-        //Initialize the data and resolution you require for your strategy:
+        // initialize the data and resolution you require for your strategy:
         public override void Initialize()
         {
             SetStartDate(2015, 01, 01);
-            SetEndDate(2015, 12, 31);  // DateTime.Now
+            SetEndDate(2016, 02, 28);  // DateTime.Now
             SetCash(nav);
 
             // add security
@@ -94,16 +95,15 @@ namespace QuantConnect.Algorithm.CSharp
             sampledToday = data.Time;
             
             holdings = Convert.ToInt32(Portfolio[symbol].Quantity);
-            // no position
-            if (holdings == 0)
+            // no position, and after a 5-min interval
+            if (holdings == 0 && barNumber - exitBar >= 5)
             {
-                // buy if short above long
+                // buy if condition met
                 if ((emaShort * (1 - tolerance)) > emaLong)
                 {
                     entryBar = barNumber;
                     // determine buy size
-                    // Portfolio.Cash = available cash, can be multiplied by leverage to get buying power
-                    decimal rawQuantity = Portfolio.Cash / closePrice;
+                    decimal rawQuantity = nav / closePrice;
                     // ensure multiples of 100
                     quantity = Convert.ToInt32(Math.Floor(rawQuantity / 100)) * 100;
                     
@@ -114,12 +114,14 @@ namespace QuantConnect.Algorithm.CSharp
                     Log(bar + ". Quantity: " + quantity + ", Exposure: " + exposure);
                 }
             }
-            // position exists
-            else if (holdings > 0)
+            // position exists, and after a 5-min interval
+            else if (holdings > 0 && barNumber - entryBar >= 5)
             {
-                // sell if short below long and after a 5-min interval
-                if ((emaShort * (1 + tolerance)) < emaLong && (barNumber - entryBar >= 5))
+                Boolean TPSL = false;
+                // sell if condition met, or TP/SL met
+                if ((emaShort * (1 + tolerance)) < emaLong || TPSL)
                 {
+                    exitBar = barNumber;
                     // place sell order
                     orderTicket = Order(symbol, -holdings);
                     Log("Sell " + holdings.ToString() + " shares of " + symbol + " at " + closePrice);
