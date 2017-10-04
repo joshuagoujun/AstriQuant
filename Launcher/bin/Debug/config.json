@@ -9,7 +9,7 @@
     "environment": "backtesting-desktop", // "live-paper", "backtesting-desktop", "live-interactive", "live-interactive-iqfeed"
 
     // algorithm class selector
-    "algorithm-type-name": "BasicTemplateAlgorithm", // BasicMACDTrendLongOnly, BasicTemplateAlgorithm
+    "algorithm-type-name": "BasicLongOnlyAlgorithm", // BasicMACDTrendLongOnly, BasicTemplateAlgorithm
 
     // Algorithm language selector - options CSharp, FSharp, VisualBasic, Python, Java
     "algorithm-language": "CSharp",
@@ -25,8 +25,8 @@
     "data-folder": "../../../Data/",
     "data-http-server": "101.78.229.43",
     "data-port": "8080",
-    "activity-id": "",  
-    "results-folder": "../Results/", 
+    "activity-id": "",
+    "results-folder": "../Results/",
 
     // handlers
     "log-handler": "QuantConnect.Logging.CompositeLogHandler",

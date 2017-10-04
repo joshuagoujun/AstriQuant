@@ -66,6 +66,18 @@
       <HintPath>..\packages\QuantConnect.pythonnet.1.0.3.5\lib\Python.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="QuantConnect.Algorithm, Version=2.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\QuantConnect.Algorithm.dll</HintPath>
+    </Reference>
+    <Reference Include="QuantConnect.Common, Version=2.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\QuantConnect.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="QuantConnect.Indicators, Version=2.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\QuantConnect.Indicators.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -168,20 +180,6 @@
     <Compile Include="WeeklyUniverseSelectionRegressionAlgorithm.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Algorithm\QuantConnect.Algorithm.csproj">
-      <Project>{3240aca4-bdd4-4d24-ac36-bbb651c39212}</Project>
-      <Name>QuantConnect.Algorithm</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Common\QuantConnect.csproj">
-      <Project>{2545c0b4-fabb-49c9-8dd1-9ad7ee23f86b}</Project>
-      <Name>QuantConnect</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Indicators\QuantConnect.Indicators.csproj">
-      <Project>{73fb2522-c3ed-4e47-8e3d-afad48a6b888}</Project>
-      <Name>QuantConnect.Indicators</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
@@ -201,8 +199,8 @@
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target> -->
-  <!--<Target Name="AfterBuild">
+  <Target Name="AfterBuild">
 	  <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="..\Launcher\bin\Debug\"  ContinueOnError="true" />
 	  <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="..\UserInterface\bin\Debug\" ContinueOnError="true" />
-  </Target>-->
+  </Target>
 </Project>
