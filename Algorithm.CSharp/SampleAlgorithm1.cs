@@ -62,7 +62,7 @@ namespace QuantConnect.Algorithm.CSharp
             SetCash(nav);
 
             // add security
-            AddData<AstriData>(symbol, Resolution.Minute);  // Tick, Second, Minute, Hour, Daily
+            AddData<AstriData>(symbol, Resolution.Minute, TimeZones.Shanghai);  // Tick, Second, Minute, Hour, Daily
             // indicators
             rsi = RSI(symbol, 14, MovingAverageType.Wilders, Resolution.Hour);
             macd = MACD(symbol, 12, 26, 9, MovingAverageType.Exponential, Resolution.Hour);
@@ -90,10 +90,7 @@ namespace QuantConnect.Algorithm.CSharp
             // Log(bar + "," + openPrice + "," + highPrice + "," + lowPrice + "," + closePrice + "," + rsi);
 
             // get first bar for the day and report
-            if (sampledToday.Date != data.Time.Date)
-            {
-                Log(bar + ". Current NAV: " + nav);
-            }
+            if (sampledToday.Date != data.Time.Date) Log(bar + ". Current NAV: " + nav);
             sampledToday = data.Time;
 
             holdings = Convert.ToInt32(Portfolio[symbol].Quantity);
@@ -105,7 +102,7 @@ namespace QuantConnect.Algorithm.CSharp
                 {
                     entryBar = barNumber;
                     // determine buy size
-                    decimal rawQuantity = nav / closePrice;
+                    decimal rawQuantity = Math.Min(nav, Portfolio.Cash) / closePrice;
                     // ensure multiples of 100
                     quantity = Convert.ToInt32(Math.Floor(rawQuantity / 100)) * 100;
 
@@ -140,9 +137,8 @@ namespace QuantConnect.Algorithm.CSharp
         // end of day reporting
         public override void OnEndOfDay()
         {
-            holdings = Convert.ToInt32(Portfolio[symbol].Quantity);
             // latest asset value
-            nav = holdings * closePrice + Portfolio.Cash;
+            nav = Portfolio[symbol].HoldingsValue + Portfolio.Cash;
         }
 
         // monitor event arrival

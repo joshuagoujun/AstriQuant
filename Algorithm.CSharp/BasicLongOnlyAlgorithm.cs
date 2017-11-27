@@ -39,6 +39,8 @@ namespace QuantConnect.Algorithm.CSharp
         int exitBar = 0;
         decimal tolerance = 0m; //0.1% safety margin in prices to avoid bouncing
         DateTime sampledToday = DateTime.Now;
+        decimal TPPrice = 0;
+        decimal SLPrice = 0;
 
         // position related
         int holdings = 0;
@@ -51,6 +53,8 @@ namespace QuantConnect.Algorithm.CSharp
         // indicators
         ExponentialMovingAverage emaShort;
         ExponentialMovingAverage emaLong;
+        // RelativeStrengthIndex rsi;
+        // MovingAverageConvergenceDivergence macd;
 
         // initialize the data and resolution you require for your strategy:
         public override void Initialize()
@@ -60,10 +64,12 @@ namespace QuantConnect.Algorithm.CSharp
             SetCash(nav);
 
             // add security
-            AddData<AstriData>(symbol, Resolution.Minute);  // Tick, Second, Minute, Hour, Daily
-            // EMA
+            AddData<AstriData>(symbol, Resolution.Minute, TimeZones.Shanghai);  // Tick, Second, Minute, Hour, Daily
+            // indicators
             emaShort = EMA(symbol, 10, Resolution.Hour);
             emaLong = EMA(symbol, 50, Resolution.Hour);
+            // rsi = RSI(symbol, 14, MovingAverageType.Wilders, Resolution.Hour);
+            // macd = MACD(symbol, 12, 26, 9, MovingAverageType.Exponential, Resolution.Hour);
         }
 
         //Handle TradeBar Events: a TradeBar occurs on every time-interval
@@ -72,7 +78,7 @@ namespace QuantConnect.Algorithm.CSharp
             // live mode
             if (LiveMode)
                 SetRuntimeStatistic(symbol, data.Close.ToString("C"));
-            
+
             // wait until EMA's are ready
             if (!emaShort.IsReady || !emaLong.IsReady) return;
 
@@ -86,14 +92,11 @@ namespace QuantConnect.Algorithm.CSharp
 
             // print OHLC for each bar
             // Log(bar + "," + openPrice + "," + highPrice + "," + lowPrice + "," + closePrice + "," + emaShort + "," + emaLong);
-
-            // get first bar for the day and report
-            if (sampledToday.Date != data.Time.Date)
-            {
-                Log(bar + ". Current NAV: " + nav);
-            }
-            sampledToday = data.Time;
             
+            // get first bar for the day and report
+            if (sampledToday.Date != data.Time.Date) Log(bar + ". Current NAV: " + nav);
+            sampledToday = data.Time;
+
             holdings = Convert.ToInt32(Portfolio[symbol].Quantity);
             // no position, and after a 5-min interval
             if (holdings == 0 && barNumber - exitBar >= 5)
@@ -103,20 +106,26 @@ namespace QuantConnect.Algorithm.CSharp
                 {
                     entryBar = barNumber;
                     // determine buy size
-                    decimal rawQuantity = nav / closePrice;
+                    decimal rawQuantity = Math.Min(nav, Portfolio.Cash) / closePrice;
                     // ensure multiples of 100
                     quantity = Convert.ToInt32(Math.Floor(rawQuantity / 100)) * 100;
-                    
+
                     // place buy order
                     orderTicket = Order(symbol, quantity);
-                    Log("Buy " + quantity.ToString() + " shares of " + symbol + " at " + closePrice);
+                    Log("Buy " + quantity + " shares of " + symbol + " at " + closePrice);
                     exposure = quantity * closePrice / nav; // trade-based exposure
                     Log(bar + ". Quantity: " + quantity + ", Exposure: " + exposure);
+
+                    // set take profit and stop loss levels
+                    // TPPrice = closePrice * 1.10m;
+                    // SLPrice = closePrice * 0.90m;
+                    // Log("Stop loss/take profit levels at (" + SLPrice + "," + TPPrice + ")");
                 }
             }
             // position exists, and after a 5-min interval
             else if (holdings > 0 && barNumber - entryBar >= 5)
             {
+                // Boolean TPSL = highPrice >= TPPrice || lowPrice <= SLPrice;
                 Boolean TPSL = false;
                 // sell if condition met, or TP/SL met
                 if ((emaShort * (1 + tolerance)) < emaLong || TPSL)
@@ -124,19 +133,17 @@ namespace QuantConnect.Algorithm.CSharp
                     exitBar = barNumber;
                     // place sell order
                     orderTicket = Order(symbol, -holdings);
-                    Log("Sell " + holdings.ToString() + " shares of " + symbol + " at " + closePrice);
+                    Log("Sell " + holdings + " shares of " + symbol + " at " + closePrice);
                     Log(bar + ". Quantity: 0, Exposure: 0");
                 }
             }
-
         }
 
         // end of day reporting
         public override void OnEndOfDay()
         {
-            holdings = Convert.ToInt32(Portfolio[symbol].Quantity);
             // latest asset value
-            nav = holdings * closePrice + Portfolio.Cash;
+            nav = Portfolio[symbol].HoldingsValue + Portfolio.Cash;
         }
 
         // monitor event arrival

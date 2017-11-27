@@ -77,6 +77,11 @@
             Implementation of local/desktop job request:
             </summary>
         </member>
+        <member name="P:QuantConnect.Queues.JobQueue.AlgorithmLocation">
+            <summary>
+            Physical location of Algorithm DLL.
+            </summary>
+        </member>
         <member name="M:QuantConnect.Queues.JobQueue.Initialize">
             <summary>
             Initialize the job queue:
@@ -99,11 +104,6 @@
             Desktop/Local acknowledge the task processed. Nothing to do.
             </summary>
             <param name="job"></param>
-        </member>
-        <member name="P:QuantConnect.Queues.JobQueue.AlgorithmLocation">
-            <summary>
-            Physical location of Algorithm DLL.
-            </summary>
         </member>
     </members>
 </doc>

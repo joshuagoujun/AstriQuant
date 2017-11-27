@@ -14,6 +14,11 @@
             Initialize the API using the config.json file.
             </summary>
         </member>
+        <member name="P:QuantConnect.Api.Api.Connected">
+            <summary>
+            Check if Api is successfully connected with correct credentials
+            </summary>
+        </member>
         <member name="M:QuantConnect.Api.Api.CreateProject(System.String,QuantConnect.Language)">
             <summary>
             Create a project with the specified name and language via QuantConnect.com API
@@ -314,11 +319,6 @@
             </summary>
             <returns>Time based hash of user token and timestamp.</returns>
         </member>
-        <member name="P:QuantConnect.Api.Api.Connected">
-            <summary>
-            Check if Api is successfully connected with correct credentials
-            </summary>
-        </member>
         <member name="T:QuantConnect.Api.ApiConnection">
             <summary>
             API Connection and Hash Manager
@@ -336,6 +336,11 @@
             <param name="userId">User Id number from QuantConnect.com account. Found at www.quantconnect.com/account </param>
             <param name="token">Access token for the QuantConnect account. Found at www.quantconnect.com/account </param>
         </member>
+        <member name="P:QuantConnect.Api.ApiConnection.Connected">
+            <summary>
+            Return true if connected successfully.
+            </summary>
+        </member>
         <member name="M:QuantConnect.Api.ApiConnection.TryRequest``1(RestSharp.RestRequest,``0@)">
             <summary>
             Place a secure request and get back an object of type T.
@@ -344,11 +349,6 @@
             <param name="request"></param>
             <param name="result">Result object from the </param>
             <returns>T typed object response</returns>
-        </member>
-        <member name="P:QuantConnect.Api.ApiConnection.Connected">
-            <summary>
-            Return true if connected successfully.
-            </summary>
         </member>
         <member name="T:QuantConnect.Api.ApiWebSocketConnection">
             <summary>

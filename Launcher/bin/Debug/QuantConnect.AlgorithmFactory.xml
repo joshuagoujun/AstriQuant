@@ -9,11 +9,6 @@
             Loader creates and manages the memory and exception space of the algorithm, ensuring if it explodes the Lean Engine is intact.
             </summary>
         </member>
-        <member name="F:QuantConnect.AlgorithmFactory.Loader.AlgorithmBaseTypeFullName">
-            <summary>
-            The full type name of QCAlgorithm, this is so we don't pick him up when querying for types
-            </summary>
-        </member>
         <member name="F:QuantConnect.AlgorithmFactory.Loader.appDomain">
             <summary>
             Memory space of the user algorithm
@@ -22,6 +17,11 @@
         <member name="F:QuantConnect.AlgorithmFactory.Loader.AlgorithmInterfaceType">
             <summary>
             The algorithm's interface type that we'll be trying to load
+            </summary>
+        </member>
+        <member name="F:QuantConnect.AlgorithmFactory.Loader.AlgorithmBaseTypeFullName">
+            <summary>
+            The full type name of QCAlgorithm, this is so we don't pick him up when querying for types
             </summary>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Loader.#ctor">
@@ -104,26 +104,176 @@
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.#ctor(Python.Runtime.PyObject)">
             <summary>
-            <see cref="T:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper"/> constructor.
+            <see cref = "T:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper"/> constructor.
             Creates and wraps the algorithm written in python.  
             </summary>
             <param name="module">Python module with the algorithm written in Python</param>
         </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.AlgorithmId">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.AlgorithmId" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Benchmark">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.Benchmark" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.BrokerageMessageHandler">
+            <summary>
+            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.BrokerageMessageHandler" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.BrokerageModel">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.BrokerageModel" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.DebugMessages">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.DebugMessages" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.EndDate">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.EndDate" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.ErrorMessages">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.ErrorMessages" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.HistoryProvider">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.HistoryProvider" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.IsWarmingUp">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.IsWarmingUp" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.LiveMode">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.LiveMode" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.LogMessages">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.LogMessages" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Name">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.Name" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Notify">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.Notify" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Portfolio">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.Portfolio" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.RunTimeError">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.RunTimeError" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.RuntimeStatistics">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.RuntimeStatistics" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Schedule">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.Schedule" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Securities">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.Securities" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SecurityInitializer">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.SecurityInitializer" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.TradeBuilder">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.TradeBuilder" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Settings">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.Settings" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.StartDate">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.StartDate" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Status">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.Status" /> in Python
+            </summary>
+        </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetStatus(QuantConnect.AlgorithmStatus)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetStatus(QuantConnect.AlgorithmStatus)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetStatus(QuantConnect.AlgorithmStatus)" /> in Python
             </summary>
             <param name="value"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetAvailableDataTypes(System.Collections.Generic.Dictionary{QuantConnect.SecurityType,System.Collections.Generic.List{QuantConnect.TickType}})">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetAvailableDataTypes(System.Collections.Generic.Dictionary{QuantConnect.SecurityType,System.Collections.Generic.List{QuantConnect.TickType}})"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetAvailableDataTypes(System.Collections.Generic.Dictionary{QuantConnect.SecurityType,System.Collections.Generic.List{QuantConnect.TickType}})" /> in Python
             </summary>
             <param name="availableDataTypes"></param>
         </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SubscriptionManager">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.SubscriptionManager" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Time">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.Time" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.TimeZone">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.TimeZone" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Transactions">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.Transactions" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.UniverseManager">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.UniverseManager" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.UniverseSettings">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.UniverseSettings" /> in Python
+            </summary>
+        </member>
+        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.UtcTime">
+            <summary>
+            Wrapper for <see cref = "P:QuantConnect.Interfaces.IAlgorithm.UtcTime" /> in Python
+            </summary>
+        </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.AddSecurity(QuantConnect.SecurityType,System.String,QuantConnect.Resolution,System.String,System.Boolean,System.Decimal,System.Boolean)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.AddSecurity(QuantConnect.SecurityType,System.String,QuantConnect.Resolution,System.String,System.Boolean,System.Decimal,System.Boolean)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.AddSecurity(QuantConnect.SecurityType,System.String,QuantConnect.Resolution,System.String,System.Boolean,System.Decimal,System.Boolean)" /> in Python
             </summary>
             <param name="securityType"></param>
             <param name="symbol"></param>
@@ -156,50 +306,50 @@
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Debug(System.String)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.Debug(System.String)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.Debug(System.String)" /> in Python
             </summary>
             <param name="message"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Error(System.String)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.Error(System.String)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.Error(System.String)" /> in Python
             </summary>
             <param name="message"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.GetChartUpdates(System.Boolean)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.GetChartUpdates(System.Boolean)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.GetChartUpdates(System.Boolean)" /> in Python
             </summary>
             <param name="clearChartData"></param>
             <returns></returns>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.GetLocked">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.GetLocked"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.GetLocked" /> in Python
             </summary>
             <returns></returns>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.GetParameter(System.String)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.GetParameter(System.String)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.GetParameter(System.String)" /> in Python
             </summary>
             <param name="name"></param>
             <returns></returns>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.GetWarmupHistoryRequests">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.GetWarmupHistoryRequests"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.GetWarmupHistoryRequests" /> in Python
             </summary>
             <returns></returns>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Initialize">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.Initialize"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.Initialize" /> in Python
             </summary>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Liquidate(QuantConnect.Symbol,System.String)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.Liquidate(QuantConnect.Symbol,System.String)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.Liquidate(QuantConnect.Symbol,System.String)" /> in Python
             </summary>
             <param name="symbolToLiquidate"></param>
             <param name="tag"></param>
@@ -207,115 +357,115 @@
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Log(System.String)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.Log(System.String)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.Log(System.String)" /> in Python
             </summary>
             <param name="message"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.OnBrokerageDisconnect">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.OnBrokerageDisconnect"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.OnBrokerageDisconnect" /> in Python
             </summary>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.OnBrokerageMessage(QuantConnect.Brokerages.BrokerageMessageEvent)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.OnBrokerageMessage(QuantConnect.Brokerages.BrokerageMessageEvent)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.OnBrokerageMessage(QuantConnect.Brokerages.BrokerageMessageEvent)" /> in Python
             </summary>
             <param name="messageEvent"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.OnBrokerageReconnect">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.OnBrokerageReconnect"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.OnBrokerageReconnect" /> in Python
             </summary>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.OnData(QuantConnect.Data.Slice)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.OnData(QuantConnect.Data.Slice)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.OnData(QuantConnect.Data.Slice)" /> in Python
             </summary>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.OnEndOfAlgorithm">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.OnEndOfAlgorithm"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.OnEndOfAlgorithm" /> in Python
             </summary>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.OnEndOfDay">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.OnEndOfDay"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.OnEndOfDay" /> in Python
             </summary>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.OnEndOfDay(QuantConnect.Symbol)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.OnEndOfDay(QuantConnect.Symbol)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.OnEndOfDay(QuantConnect.Symbol)" /> in Python
             </summary>
             <param name="symbol"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.OnMarginCall(System.Collections.Generic.List{QuantConnect.Orders.SubmitOrderRequest})">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.OnMarginCall(System.Collections.Generic.List{QuantConnect.Orders.SubmitOrderRequest})"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.OnMarginCall(System.Collections.Generic.List{QuantConnect.Orders.SubmitOrderRequest})" /> in Python
             </summary>
             <param name="requests"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.OnMarginCallWarning">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.OnMarginCallWarning"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.OnMarginCallWarning" /> in Python
             </summary>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.OnOrderEvent(QuantConnect.Orders.OrderEvent)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.OnOrderEvent(QuantConnect.Orders.OrderEvent)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.OnOrderEvent(QuantConnect.Orders.OrderEvent)" /> in Python
             </summary>
             <param name="newEvent"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.OnAssignmentOrderEvent(QuantConnect.Orders.OrderEvent)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.OnAssignmentOrderEvent(QuantConnect.Orders.OrderEvent)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.OnAssignmentOrderEvent(QuantConnect.Orders.OrderEvent)" /> in Python
             </summary>
             <param name="newEvent"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.OnSecuritiesChanged(QuantConnect.Data.UniverseSelection.SecurityChanges)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.OnSecuritiesChanged(QuantConnect.Data.UniverseSelection.SecurityChanges)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.OnSecuritiesChanged(QuantConnect.Data.UniverseSelection.SecurityChanges)" /> in Python
             </summary>
             <param name="changes"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.PostInitialize">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.PostInitialize"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.PostInitialize" /> in Python
             </summary>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.RemoveSecurity(QuantConnect.Symbol)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.RemoveSecurity(QuantConnect.Symbol)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.RemoveSecurity(QuantConnect.Symbol)" /> in Python
             </summary>
             <param name="symbol"></param>
             <returns></returns>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetAlgorithmId(System.String)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetAlgorithmId(System.String)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetAlgorithmId(System.String)" /> in Python
             </summary>
             <param name="algorithmId"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetBrokerageMessageHandler(QuantConnect.Brokerages.IBrokerageMessageHandler)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetBrokerageMessageHandler(QuantConnect.Brokerages.IBrokerageMessageHandler)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetBrokerageMessageHandler(QuantConnect.Brokerages.IBrokerageMessageHandler)" /> in Python
             </summary>
             <param name="brokerageMessageHandler"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetBrokerageModel(QuantConnect.Brokerages.IBrokerageModel)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetBrokerageModel(QuantConnect.Brokerages.IBrokerageModel)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetBrokerageModel(QuantConnect.Brokerages.IBrokerageModel)" /> in Python
             </summary>
             <param name="brokerageModel"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetCash(System.Decimal)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetCash(System.Decimal)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetCash(System.Decimal)" /> in Python
             </summary>
             <param name="startingCash"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetCash(System.String,System.Decimal,System.Decimal)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetCash(System.String,System.Decimal,System.Decimal)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetCash(System.String,System.Decimal,System.Decimal)" /> in Python
             </summary>
             <param name="symbol"></param>
             <param name="startingCash"></param>
@@ -323,47 +473,47 @@
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetDateTime(System.DateTime)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetDateTime(System.DateTime)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetDateTime(System.DateTime)" /> in Python
             </summary>
             <param name="time"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetRunTimeError(System.Exception)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetRunTimeError(System.Exception)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetRunTimeError(System.Exception)" /> in Python
             </summary>
             <param name="exception"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetFinishedWarmingUp">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetFinishedWarmingUp"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetFinishedWarmingUp" /> in Python
             </summary>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetHistoryProvider(QuantConnect.Interfaces.IHistoryProvider)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetHistoryProvider(QuantConnect.Interfaces.IHistoryProvider)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetHistoryProvider(QuantConnect.Interfaces.IHistoryProvider)" /> in Python
             </summary>
             <param name="historyProvider"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetLiveMode(System.Boolean)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetLiveMode(System.Boolean)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetLiveMode(System.Boolean)" /> in Python
             </summary>
             <param name="live"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetLocked">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetLocked"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetLocked" /> in Python
             </summary>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetMaximumOrders(System.Int32)">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetMaximumOrders(System.Int32)"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetMaximumOrders(System.Int32)" /> in Python
             </summary>
             <param name="max"></param>
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SetParameters(System.Collections.Generic.Dictionary{System.String,System.String})">
             <summary>
-            Wrapper for <see cref="M:QuantConnect.Interfaces.IAlgorithm.SetParameters(System.Collections.Generic.Dictionary{System.String,System.String})"/> in Python
+            Wrapper for <see cref = "M:QuantConnect.Interfaces.IAlgorithm.SetParameters(System.Collections.Generic.Dictionary{System.String,System.String})" /> in Python
             </summary>
             <param name="parameters"></param>
         </member>
@@ -375,159 +525,9 @@
         </member>
         <member name="M:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.ToString">
             <summary>
-            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper"/> object.
+            Returns a <see cref = "T:System.String"/> that represents the current <see cref = "T:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper"/> object.
             </summary>
             <returns></returns>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.AlgorithmId">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.AlgorithmId"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Benchmark">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.Benchmark"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.BrokerageMessageHandler">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.BrokerageMessageHandler"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.BrokerageModel">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.BrokerageModel"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.DebugMessages">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.DebugMessages"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.EndDate">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.EndDate"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.ErrorMessages">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.ErrorMessages"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.HistoryProvider">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.HistoryProvider"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.IsWarmingUp">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.IsWarmingUp"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.LiveMode">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.LiveMode"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.LogMessages">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.LogMessages"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Name">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.Name"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Notify">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.Notify"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Portfolio">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.Portfolio"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.RunTimeError">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.RunTimeError"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.RuntimeStatistics">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.RuntimeStatistics"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Schedule">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.Schedule"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Securities">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.Securities"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SecurityInitializer">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.SecurityInitializer"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.TradeBuilder">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.TradeBuilder"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Settings">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.Settings"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.StartDate">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.StartDate"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Status">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.Status"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.SubscriptionManager">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.SubscriptionManager"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Time">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.Time"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.TimeZone">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.TimeZone"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.Transactions">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.Transactions"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.UniverseManager">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.UniverseManager"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.UniverseSettings">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.UniverseSettings"/> in Python
-            </summary>
-        </member>
-        <member name="P:QuantConnect.AlgorithmFactory.Python.Wrappers.AlgorithmPythonWrapper.UtcTime">
-            <summary>
-            Wrapper for <see cref="P:QuantConnect.Interfaces.IAlgorithm.UtcTime"/> in Python
-            </summary>
         </member>
     </members>
 </doc>

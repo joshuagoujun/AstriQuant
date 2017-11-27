@@ -45,9 +45,6 @@ C:\Users\admin\Documents\Lean\Algorithm.CSharp\obj\Debug\QuantConnect.Algorithm.
 C:\Users\admin\Documents\Lean\Algorithm.CSharp\obj\Debug\QuantConnect.Algorithm.CSharp.dll
 C:\Users\admin\Documents\Lean\Algorithm.CSharp\obj\Debug\QuantConnect.Algorithm.CSharp.pdb
 C:\Users\admin\Documents\Lean\Algorithm.CSharp\bin\Debug\NLog.config
-C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\obj\Debug\QuantConnect.Algorithm.CSharp.csprojResolveAssemblyReference.cache
-C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\obj\Debug\QuantConnect.Algorithm.CSharp.dll
-C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\obj\Debug\QuantConnect.Algorithm.CSharp.pdb
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\Accord.dll.config
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\nPython.exe
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Algorithm.CSharp.dll.config
@@ -64,12 +61,9 @@ C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\Python.Runtime.dll
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Algorithm.dll
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Common.dll
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Indicators.dll
-C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Configuration.dll
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QLNet.dll
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\Fasterflect.dll
-C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Logging.dll
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\CloneExtensions.dll
-C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\NLog.dll
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\Accord.xml
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\Accord.Fuzzy.xml
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\Accord.Math.xml
@@ -84,9 +78,7 @@ C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Common
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Common.xml
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Indicators.pdb
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Indicators.xml
-C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Configuration.pdb
-C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Configuration.xml
 C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\Fasterflect.xml
-C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Logging.pdb
-C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\QuantConnect.Logging.xml
-C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\bin\Debug\NLog.xml
+C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\obj\Debug\QuantConnect.Algorithm.CSharp.csprojResolveAssemblyReference.cache
+C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\obj\Debug\QuantConnect.Algorithm.CSharp.dll
+C:\Users\admin\Desktop\AstriQuant\Algorithm.CSharp\obj\Debug\QuantConnect.Algorithm.CSharp.pdb

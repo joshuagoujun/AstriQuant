@@ -6,10 +6,10 @@
     // two predefined environments, 'backtesting' and 'live', feel free
     // to add more!
 
-    "environment": "backtesting-desktop", // "live-paper", "backtesting-desktop", "live-interactive", "live-interactive-iqfeed"
+    "environment": "live-desktop", // "live-paper", "backtesting-desktop", "live-interactive", "live-interactive-iqfeed"
 
     // algorithm class selector
-    "algorithm-type-name": "BasicLongOnlyAlgorithm", // BasicMACDTrendLongOnly, BasicTemplateAlgorithm
+    "algorithm-type-name": "DRLTrader", // BasicMACDTrendLongOnly, BasicTemplateAlgorithm
 
     // Algorithm language selector - options CSharp, FSharp, VisualBasic, Python, Java
     "algorithm-language": "CSharp",
@@ -23,7 +23,7 @@
 
     // engine
     "data-folder": "../../../Data/",
-    "data-http-server": "101.78.229.43",
+    "data-http-server": "18.221.10.7",
     "data-port": "8080",
     "activity-id": "",
     "results-folder": "../Results/",

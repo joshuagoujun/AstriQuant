@@ -35,8 +35,7 @@ namespace QuantConnect.Algorithm.CSharp
         decimal price = 0;
         decimal tolerance = 0m; //0.1% safety margin in prices to avoid bouncing.
         decimal exposure = 0.8m;
-        // string symbol = "000651-SZSE";
-        string symbol = "002385-SZSE";
+        string symbol = "002385-SZSE";  // "000651-SZSE";
         DateTime sampledToday = DateTime.Now;
 
         OrderTicket orderTicket;
@@ -55,13 +54,12 @@ namespace QuantConnect.Algorithm.CSharp
         public override void Initialize()
         {
             SetStartDate(2015, 01, 01);
-            // SetEndDate(DateTime.Now);
-            SetEndDate(2015, 12, 31);
+            SetEndDate(2015, 12, 31); // DateTime.Now
             SetCash(1000000);
             // add security, define resolution here
             // finer resolution improves order execution
-            AddData<AstriData>(symbol, Resolution.Minute);
-            // AddData<AstriData>(symbol, Resolution.Hour);
+            // data arrival according to resolution defined here
+            AddData<AstriData>(symbol, Resolution.Hour);  // Tick, Second, Minute, Hour, Daily
 
             // daily ema
             // (stays the same for the whole trading day)
@@ -77,18 +75,15 @@ namespace QuantConnect.Algorithm.CSharp
             // live mode
             if (LiveMode)
                 SetRuntimeStatistic(symbol, data.Close.ToString("C"));
-
-
+            
             // arrival according to resolution defined in AddSecurity
             // Log(data[symbol].Time.ToString());
             // Log(emaShort.ToString());
 
             // Only process 1 bar per day
             if (sampledToday.Date == data.Time.Date) return;
-
-            Log("-" + Time.ToShortDateString() + "-");
-            price = Securities[symbol].Open;
-            Log("Open price: " + price.ToString());
+            
+            price = Securities[symbol].Close;
             // only take one data point per day (opening price)
             // Update time after first bar such that remaining bars are not processed
             sampledToday = data.Time;
@@ -98,6 +93,8 @@ namespace QuantConnect.Algorithm.CSharp
 
             // wait until EMA's are ready:
             if (!emaShort.IsReady || !emaLong.IsReady) return;
+
+            Log(data.Time + "," + price + "," + emaShort + "," + emaLong);
 
             int holdings = Convert.ToInt32(Portfolio[symbol].Quantity);
 

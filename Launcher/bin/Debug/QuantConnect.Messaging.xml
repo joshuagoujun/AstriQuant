@@ -9,6 +9,12 @@
             Desktop implementation of messaging system for Lean Engine
             </summary>
         </member>
+        <member name="P:QuantConnect.Messaging.EventMessagingHandler.HasSubscribers">
+            <summary>
+            Gets or sets whether this messaging handler has any current subscribers.
+            When set to false, messages won't be sent.
+            </summary>
+        </member>
         <member name="M:QuantConnect.Messaging.EventMessagingHandler.Initialize">
             <summary>
             Initialize the Messaging System Plugin. 
@@ -76,15 +82,15 @@
             Raise a backtest result event safely.
             </summary>
         </member>
-        <member name="P:QuantConnect.Messaging.EventMessagingHandler.HasSubscribers">
-            <summary>
-            Gets or sets whether this messaging handler has any current subscribers.
-            When set to false, messages won't be sent.
-            </summary>
-        </member>
         <member name="T:QuantConnect.Messaging.Messaging">
             <summary>
             Local/desktop implementation of messaging system for Lean Engine.
+            </summary>
+        </member>
+        <member name="P:QuantConnect.Messaging.Messaging.HasSubscribers">
+            <summary>
+            This implementation ignores the <seealso cref="P:QuantConnect.Messaging.Messaging.HasSubscribers"/> flag and
+            instead will always write to the log.
             </summary>
         </member>
         <member name="M:QuantConnect.Messaging.Messaging.Initialize">
@@ -105,12 +111,6 @@
         <member name="M:QuantConnect.Messaging.Messaging.SendNotification(QuantConnect.Notifications.Notification)">
             <summary>
             Send any notification with a base type of Notification.
-            </summary>
-        </member>
-        <member name="P:QuantConnect.Messaging.Messaging.HasSubscribers">
-            <summary>
-            This implementation ignores the <seealso cref="P:QuantConnect.Messaging.Messaging.HasSubscribers"/> flag and
-            instead will always write to the log.
             </summary>
         </member>
         <member name="T:QuantConnect.Messaging.StreamingApi">
@@ -152,6 +152,12 @@
             Message handler that sends messages over tcp using NetMQ.
             </summary>
         </member>
+        <member name="P:QuantConnect.Messaging.StreamingMessageHandler.HasSubscribers">
+            <summary>
+            Gets or sets whether this messaging handler has any current subscribers.
+            This is not used in this message handler.  Messages are sent via tcp as they arrive
+            </summary>
+        </member>
         <member name="M:QuantConnect.Messaging.StreamingMessageHandler.Initialize">
             <summary>
             Initialize the messaging system
@@ -183,12 +189,6 @@
         <member name="M:QuantConnect.Messaging.StreamingMessageHandler.CheckPort">
             <summary>
             Check if port to be used by the desktop application is available.
-            </summary>
-        </member>
-        <member name="P:QuantConnect.Messaging.StreamingMessageHandler.HasSubscribers">
-            <summary>
-            Gets or sets whether this messaging handler has any current subscribers.
-            This is not used in this message handler.  Messages are sent via tcp as they arrive
             </summary>
         </member>
     </members>

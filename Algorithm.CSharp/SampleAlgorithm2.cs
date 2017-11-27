@@ -35,7 +35,6 @@ namespace QuantConnect.Algorithm.CSharp
         // strategy related
         string symbol = "000060-SZSE";
         string bar;
-        int barNumber = 0;
         DateTime sampledToday = DateTime.Now;
         decimal constantMix = 0.8m;
 
@@ -43,7 +42,7 @@ namespace QuantConnect.Algorithm.CSharp
         int holdings = 0;
         int quantity = 0;
         decimal exposure = 0m;
-        decimal openPrice, highPrice, lowPrice, closePrice;
+        decimal closePrice;
         decimal nav = 1000000m;
         OrderTicket orderTicket;
 
@@ -57,7 +56,7 @@ namespace QuantConnect.Algorithm.CSharp
             SetCash(nav);
 
             // add security
-            AddData<AstriData>(symbol, Resolution.Minute);  // Tick, Second, Minute, Hour, Daily
+            AddData<AstriData>(symbol, Resolution.Minute, TimeZones.Shanghai);  // Tick, Second, Minute, Hour, Daily
             // indicators
         }
 
@@ -97,9 +96,8 @@ namespace QuantConnect.Algorithm.CSharp
         // end of day reporting
         public override void OnEndOfDay()
         {
-            holdings = Convert.ToInt32(Portfolio[symbol].Quantity);
             // latest asset value
-            nav = holdings * closePrice + Portfolio.Cash;
+            nav = Portfolio[symbol].HoldingsValue + Portfolio.Cash;
         }
 
         // monitor event arrival

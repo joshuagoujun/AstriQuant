@@ -59,7 +59,7 @@ namespace QuantConnect.Algorithm.CSharp
                 //SetHoldings(_spy, 1);
                 //SetHoldings(_hsbc, 1);
                 //Debug("Purchased Stock");
-                Order("002385-SZSE", 100);
+                Order("002385-SZSE", 101);
             }
         }
 

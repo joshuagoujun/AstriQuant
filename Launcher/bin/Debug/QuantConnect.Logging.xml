@@ -9,29 +9,6 @@
             Provides an <see cref="T:QuantConnect.Logging.ILogHandler"/> implementation that composes multiple handlers
             </summary>
         </member>
-        <member name="T:QuantConnect.Logging.ILogHandler">
-            <summary>
-            Interface for redirecting log output
-            </summary>
-        </member>
-        <member name="M:QuantConnect.Logging.ILogHandler.Error(System.String)">
-            <summary>
-            Write error message to log
-            </summary>
-            <param name="text">The error text to log</param>
-        </member>
-        <member name="M:QuantConnect.Logging.ILogHandler.Debug(System.String)">
-            <summary>
-            Write debug message to log
-            </summary>
-            <param name="text">The debug text to log</param>
-        </member>
-        <member name="M:QuantConnect.Logging.ILogHandler.Trace(System.String)">
-            <summary>
-            Write debug message to log
-            </summary>
-            <param name="text">The trace text to log</param>
-        </member>
         <member name="M:QuantConnect.Logging.CompositeLogHandler.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:QuantConnect.Logging.CompositeLogHandler"/> that pipes log messages to the console and log.txt
@@ -159,6 +136,21 @@
             ILogHandler implementation that queues all logs and writes them when instructed.
             </summary>
         </member>
+        <member name="P:QuantConnect.Logging.QueueLogHandler.Logs">
+            <summary>
+            Public access to the queue for log processing.
+            </summary>
+        </member>
+        <member name="T:QuantConnect.Logging.QueueLogHandler.LogEventRaised">
+            <summary>
+            LOgging event delegate
+            </summary>
+        </member>
+        <member name="E:QuantConnect.Logging.QueueLogHandler.LogEvent">
+            <summary>
+            Logging Event Handler
+            </summary>
+        </member>
         <member name="M:QuantConnect.Logging.QueueLogHandler.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:QuantConnect.Logging.QueueLogHandler"/> class.
@@ -191,21 +183,6 @@
         <member name="M:QuantConnect.Logging.QueueLogHandler.OnLogEvent(QuantConnect.Logging.LogEntry)">
             <summary>
             Raise a log event safely
-            </summary>
-        </member>
-        <member name="P:QuantConnect.Logging.QueueLogHandler.Logs">
-            <summary>
-            Public access to the queue for log processing.
-            </summary>
-        </member>
-        <member name="E:QuantConnect.Logging.QueueLogHandler.LogEvent">
-            <summary>
-            Logging Event Handler
-            </summary>
-        </member>
-        <member name="T:QuantConnect.Logging.QueueLogHandler.LogEventRaised">
-            <summary>
-            LOgging event delegate
             </summary>
         </member>
         <member name="T:QuantConnect.Logging.FunctionalLogHandler">
@@ -342,6 +319,29 @@
             Writes the message to the writer
             </summary>
         </member>
+        <member name="T:QuantConnect.Logging.ILogHandler">
+            <summary>
+            Interface for redirecting log output
+            </summary>
+        </member>
+        <member name="M:QuantConnect.Logging.ILogHandler.Error(System.String)">
+            <summary>
+            Write error message to log
+            </summary>
+            <param name="text">The error text to log</param>
+        </member>
+        <member name="M:QuantConnect.Logging.ILogHandler.Debug(System.String)">
+            <summary>
+            Write debug message to log
+            </summary>
+            <param name="text">The debug text to log</param>
+        </member>
+        <member name="M:QuantConnect.Logging.ILogHandler.Trace(System.String)">
+            <summary>
+            Write debug message to log
+            </summary>
+            <param name="text">The trace text to log</param>
+        </member>
         <member name="T:QuantConnect.Logging.LogHandlerExtensions">
             <summary>
             Logging extensions.
@@ -421,6 +421,21 @@
             Logging management class.
             </summary>
         </member>
+        <member name="P:QuantConnect.Logging.Log.LogHandler">
+            <summary>
+            Gets or sets the ILogHandler instance used as the global logging implementation.
+            </summary>
+        </member>
+        <member name="P:QuantConnect.Logging.Log.DebuggingEnabled">
+            <summary>
+            Global flag whether to enable debugging logging:
+            </summary>
+        </member>
+        <member name="P:QuantConnect.Logging.Log.DebuggingLevel">
+            <summary>
+            Set the minimum message level:
+            </summary>
+        </member>
         <member name="M:QuantConnect.Logging.Log.Error(System.String,System.Boolean)">
             <summary>
             Log error
@@ -475,21 +490,6 @@
             <param name="obj"></param>
             <param name="recursion"></param>
             <returns></returns>
-        </member>
-        <member name="P:QuantConnect.Logging.Log.LogHandler">
-            <summary>
-            Gets or sets the ILogHandler instance used as the global logging implementation.
-            </summary>
-        </member>
-        <member name="P:QuantConnect.Logging.Log.DebuggingEnabled">
-            <summary>
-            Global flag whether to enable debugging logging:
-            </summary>
-        </member>
-        <member name="P:QuantConnect.Logging.Log.DebuggingLevel">
-            <summary>
-            Set the minimum message level:
-            </summary>
         </member>
         <member name="T:QuantConnect.Logging.RegressionFileLogHandler">
             <summary>

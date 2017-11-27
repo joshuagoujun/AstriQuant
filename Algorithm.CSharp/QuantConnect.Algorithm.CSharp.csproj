@@ -66,15 +66,15 @@
       <HintPath>..\packages\QuantConnect.pythonnet.1.0.3.5\lib\Python.Runtime.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="QuantConnect.Algorithm, Version=2.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="QuantConnect.Algorithm, Version=2.4.1.3, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\QuantConnect.Algorithm.dll</HintPath>
     </Reference>
-    <Reference Include="QuantConnect.Common, Version=2.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="QuantConnect.Common, Version=2.4.1.3, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\QuantConnect.Common.dll</HintPath>
     </Reference>
-    <Reference Include="QuantConnect.Indicators, Version=2.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="QuantConnect.Indicators, Version=2.4.1.3, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\QuantConnect.Indicators.dll</HintPath>
     </Reference>
@@ -97,6 +97,10 @@
     <Compile Include="BasicTemplateFuturesHistoryAlgorithm.cs" />
     <Compile Include="BasicTemplateMultiAssetAlgorithm.cs" />
     <Compile Include="FilteredIdentityAlgorithm.cs" />
+    <Compile Include="HuAlgo.cs" />
+    <Compile Include="Huang.cs" />
+    <Compile Include="Lin.cs" />
+    <Compile Include="Liu.cs" />
     <Compile Include="OptionExerciseAssignRegressionAlgorithm.cs" />
     <Compile Include="BasicTemplateOptionsFilterUniverseAlgorithm.cs" />
     <Compile Include="BasicTemplateOptionsHistoryAlgorithm.cs" />
@@ -154,6 +158,9 @@
     <Compile Include="HourSplitRegressionAlgorithm.cs" />
     <Compile Include="SampleAlgorithm1.cs" />
     <Compile Include="SampleAlgorithm2.cs" />
+    <Compile Include="SampleAlgorithm3.cs" />
+    <Compile Include="SampleAlgorithm4.cs" />
+    <Compile Include="SampleAlgorithm5.cs" />
     <Compile Include="UniverseSelectionDefinitionsAlgorithm.cs" />
     <Compile Include="UserDefinedUniverseAlgorithm.cs" />
     <Compile Include="WarmupAlgorithm.cs" />
@@ -178,6 +185,7 @@
     <Compile Include="UpdateOrderRegressionAlgorithm.cs" />
     <Compile Include="OrderTicketDemoAlgorithm.cs" />
     <Compile Include="WeeklyUniverseSelectionRegressionAlgorithm.cs" />
+    <Compile Include="Wen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -200,7 +208,7 @@
   <Target Name="BeforeBuild">
   </Target> -->
   <Target Name="AfterBuild">
-	  <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="..\Launcher\bin\Debug\"  ContinueOnError="true" />
-	  <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="..\UserInterface\bin\Debug\" ContinueOnError="true" />
+    <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="..\Launcher\bin\Debug\" ContinueOnError="true" />
+    <Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="..\UserInterface\bin\Debug\" ContinueOnError="true" />
   </Target>
 </Project>
